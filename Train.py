@@ -22,13 +22,13 @@ train_set = torchvision.datasets.MNIST(
     root='./data',        #Use relative path to current directory
     train=True,           # Load the training set
     download=True,        # Download if it doesn't exist
-    transform=transform   # Apply the transformation defined above
+    transform=transform   # Apply the transformation 
 )
 
 
 train_loader = torch.utils.data.DataLoader(
     train_set,
-    batch_size=64,          #Standar procces of 64 images at the time
+    batch_size=64,          #Standar procces of 64 images 
     shuffle=True            #Avoiding model to learn order
 )
 
@@ -111,5 +111,6 @@ with torch.no_grad():
         _, predicted = torch.max(outputs.data, 1)
         total += labels.size(0)
         correct += (predicted == labels).sum().item()
+
 
     print(f"Accuracy on 10,000 test images: {100 * correct / total:.2f}%")
