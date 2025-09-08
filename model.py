@@ -2,9 +2,6 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-
-
-
 class DigitRecognizer(nn.Module):
 
     def __init__(self):   #Class Constructor 
@@ -13,8 +10,8 @@ class DigitRecognizer(nn.Module):
 
             #Defining Layers and Neurons on each 
             hidden_size1 = 256 # Number of neurons in the first hidden layer.
-            hidden_size2= 128 # nymber of neurons in the second hidden layer 
-            hidden_size3= 64 # nymber of neurons in the second hidden layer 
+            hidden_size2= 128 # Number of neurons in the second hidden layer 
+            hidden_size3= 64 # Number of neurons in the second hidden layer 
             output_size=10 #Number of outputs(from 0 to 9 )
 
             #Layers Neurons 
@@ -48,4 +45,5 @@ class DigitRecognizer(nn.Module):
                     #Output Layer
                     # -> output layer
                     x = self.output(x)
+
                     return x
