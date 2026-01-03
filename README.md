@@ -1,7 +1,6 @@
 # Interactive Neural Network Digit Classifier
 
-A **3-layer neural network** with **256 → 128 → 64 neurons** that recognizes handwritten digits with **96% accuracy** on test data.  
-Built with **ReLU activation** and **CrossEntropy loss** using **PyTorch**, **Pygame**, and **Streamlit** for reliable digit classification.
+Interactive handwritten digit recognizer built with PyTorch, using a 3-layer neural network that achieves 96% accuracy on test data. The application features a Pygame/Streamlit interface where users can draw their own digit and receive real-time predictions, providing an intuitive, hands-on demonstration of neural network–based digit classification.
 
 ---
 
