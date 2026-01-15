@@ -90,18 +90,15 @@ print("Finished Training")
 
 
 
-# --------------------------
+
 # Save the trained model
-# --------------------------
 torch.save(model.state_dict(), "model.pth")
 print("Model saved as model.pth")
 
 
 
 
-# --------------------------
 # Evaluate
-# --------------------------
 model.eval()
 with torch.no_grad():
     correct, total = 0, 0

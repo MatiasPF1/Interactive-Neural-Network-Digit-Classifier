@@ -2,48 +2,39 @@ import numpy as np
 import pygame
 
 
-# -------------------------
-# Complete Game
-# -------------------------
+                                    # Complete Game
 def run_drawer():
-    # -------------------------
     # Screen Dimensions 
-    # -------------------------
     GRID_SIZE = 28          # 28x28 grid
     PIXEL_SIZE = 20         # each logical cell is drawn as a 20×20 block of actual screen pixels.
     WINDOW_SIZE = GRID_SIZE * PIXEL_SIZE # 28 * 20 = 560: 560×560 Visual Screen
 
-    #-------------------------
+    
     # Screen  Colors 
-    #-------------------------
     WHITE = (255, 255, 255) #White pixels
     BLACK = (0, 0, 0) #Complete black Pixels
     DRAW_COLOR = WHITE  #White pixels drawn(0)
     BG_COLOR = BLACK #Black Background of Canvas(255)
 
-    #-------------------------
+    
     # Initialization: Game Loop
-    #-------------------------
     pygame.init() #Initialization
     screen = pygame.display.set_mode((WINDOW_SIZE, WINDOW_SIZE)) #Dimension of the windows screened 
     pygame.display.set_caption("28x28 Digit Drawer") #Caption
     screen.fill(BG_COLOR) #Screen gets Filled with the Back Ground Color
 
-    #-------------------------
+    
     # Initialization: Screen 
-    #-------------------------
     grid = np.zeros((GRID_SIZE, GRID_SIZE), dtype=np.uint8) #each pixel value is 8-bit integer (0–255): (0 = white, 255 = black)
     
-    #------------                                            
+
     # Game Setup: It Runs? , It's Drawing?, Drawing Hisotry to erase later
-    #------------
     running = True
     drawing = False
     history = []
 
-    #-------------------------
+    
     # Main Loop Setup: Drawing Action, Quit and Screen.
-    #-------------------------
     while running:
         for event in pygame.event.get(): #For all event that occur: mouse, keyboard, window actions
             if event.type == pygame.QUIT:    #Game Finishes 
